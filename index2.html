@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <center><h1>Resume Builder</h1></center>
+        <div id="form-container">
+            <form id="resume-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="tel" id="phone" placeholder="Your Phone Number" required>
+                <input type="url" id="linkedin" placeholder="LinkedIn Profile URL">
+                <input type="url" id="github" placeholder="GitHub Profile URL">
+                <input type="text" id="education" placeholder="Education (e.g., B.Sc. in Computer Science)">
+                <textarea id="experience" placeholder="Experience (e.g., Job Title at Company)"></textarea>
+                <input type="file" id="imageUpload" accept="image/*">
+                <button type="button" id="generate-resume">Generate Resume</button>
+            </form>
+        </div>
+
+        <div id="resume-preview" class="hidden">
+            <center>
+            <h2 id="resume-name"></h2>
+            <img id="resume-image" src="" alt="" class="profile-img">
+            <div class="contact-info">
+                <p>Email: <span id="resume-email"></span></p>
+                <p>Phone: <span id="resume-phone"></span></p>
+                <p>LinkedIn: <br><a href="#" id="resume-linkedin"></a></p>
+                <p>GitHub: <br><a href="#" id="resume-github"></a></p>
+            </div>
+            <h3>Education</h3>
+            <p id="resume-education"></p>
+            <h3>Experience</h3>
+            <p id="resume-experience"></p>
+            <button id="download-resume">Download Resume</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>

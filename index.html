@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <center><h1>Resume-Builder</h1></center>
+        <div id="form-container" class="form-container">
+            <form id="resume-form">
+                <label>Name:</label><input type="text" id="name" placeholder="FULL Name" required>
+                <label>Email:</label><input type="email" id="email" placeholder="Email" required>
+                <label>Contact Number:</label><input type="tel" id="phone" placeholder="CONTACT Number" required>
+                <label>Linkedin Url:</label><input type="url" id="linkedin" placeholder="LinkedIn Profile">
+                <label>GitHub Url:</label><input type="url" id="github" placeholder="GitHub Profile">
+                <label>Education:</label><input type="text" id="education" placeholder="Education">
+                <label>Experience:</label><textarea id="experience" placeholder="Experience(if any)"></textarea>
+                <label>Upload your image:</label><br><input type="file" id="imageUpload" accept="image/*">
+                <br><br><button type="button" id="generate-resume">Generate Resume</button>
+            </form>
+        </div>
+
+        <div id="rpreview" class="hidden">
+            <center>
+            <h2 id="rname"></h2>
+            <img id="rimage" src="" alt="" class="profile-img">
+            <div class="contact-info">
+                <p>Email: <span id="remail"></span></p>
+                <p>Phone: <span id="rphone"></span></p>
+                <p>LinkedIn: <br><a href="#" id="rlinkedin"></a></p>
+                <p>GitHub: <br><a href="#" id="rgithub"></a></p>
+            </div>
+            <h3>Education</h3>
+            <p id="reducation"></p>
+            <h3>Experience</h3>
+            <p id="rexperience"></p>
+            <button id="download-resume">Download Your Resume</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
